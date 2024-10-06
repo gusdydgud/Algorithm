@@ -1,19 +1,18 @@
-import java.util.Scanner;
+import java.util.*;
  
 public class Main {
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
  
-		int N = in.nextInt();
-		System.out.println(recur(N, 0));
+		int n = in.nextInt();
+		System.out.println(r(n, 0));
 	}
  
-	static int recur(int N, int count) {
-		
-		if (N < 2) {
-			return count;
+	static int r(int n, int c) {
+		if (n < 2) {
+			return c;
 		}
-		return Math.min(recur(N / 2, count + 1 + (N % 2)), recur(N / 3, count + 1 + (N % 3)));
+		return Math.min(r(n / 2, c + 1 + (n % 2)), r(n / 3, c + 1 + (n % 3)));
  
 	}
 }
