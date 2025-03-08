@@ -8,9 +8,8 @@ class Solution {
         if(type.size() >= nums.length / 2){
             answer = nums.length / 2;
         }
-        else{
+        else{ 
             
-        
             answer = type.size();
     }
         return answer;
